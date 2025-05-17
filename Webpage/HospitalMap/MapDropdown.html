@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Map Dropdown</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta ncame="description" content="" />
+    <link rel="icon" href="favicon.png">
+</head>
+<body>
+    <template id="homepage-referral">
+        <a href="/">Go to home page</a>
+    </template>
+    <script type="text/javascript">
+        const template = document.getElementById('homepage-referral');
+        document.body.appendChild(template.content);
+    </script>
+    <h1>
+        Map Dropdown [TITLE]
+    </h1>
+
+    <label>Choose the location closest to you:</label>
+    <select name="ca_locations" id="ca_locations">
+        <option value="la_jolla">La Jolla</option>
+        <option value="san_diego">San Diego</option>
+        <option value="los_angeles">Los Angeles</option>
+    </select>
+
+</body>
+</html>
