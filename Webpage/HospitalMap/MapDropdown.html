@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Map Dropdown</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta ncame="description" content="" />
+    <link rel="icon" href="favicon.png">
+</head>
+<body>
+    <template id="homepage-referral">
+        <a href="/">Go to home page</a>
+    </template>
+     <script type="text/javascript">
+        const template = document.getElementById('homepage-referral');
+        document.body.appendChild(template.content);
+     </script>
+
+    <h1>
+        Map Dropdown [TITLE]
+    </h1>
+
+    <label>Choose the location closest to you:</label>
+    <select name="ca_locations" id="ca_locations">
+        <option value="la_jolla">La Jolla</option>
+        <option value="san_diego">San Diego</option>
+        <option value="los_angeles">Los Angeles</option>
+    </select>
+
+    <form>
+        <label for="locationInput">Location:</label>
+        <input type="text" id="locationInput" name="locationInput">
+
+    </form>
+
+
+    <p id="user_current_location">
+        Normal content
+    </p>
+
+    <button type="button" id="changeTextButton">
+        Click here!
+    </button>
+    
+
+
+    <script type="text/javascript">
+        const button = document.getElementById('changeTextButton');
+        const paragraph = document.getElementById('user_current_location');
+
+        button.addEventListener("click", function() {
+            paragraph.textContent = "BUTTON CLICKED!!";
+        });
+        /*
+        const locationInput = document.getElementById('locationInput');
+        locationInput.addEventListener("input", updateLocationDisplay);
+
+        function updateLocationDisplay() {
+            document.getElementById('user_current_location').innerHTML = "<h2>Your current location is " + this.value + "</h2>";
+        }
+        */
+    </script>
+</body>
+</html>
